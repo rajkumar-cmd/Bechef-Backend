@@ -13,6 +13,7 @@ try {
 }
 })
 
+
 MealRoute.get("/:id",async (req,res)=>{
     let Id=req.params.id
        try {
@@ -22,6 +23,7 @@ MealRoute.get("/:id",async (req,res)=>{
            res.send({"msg":error.message})
        }
    })
+
 
 
 module.exports={MealRoute}
