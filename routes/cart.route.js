@@ -47,4 +47,15 @@ CartRoute.delete("/delete/:id",async(req,res)=>{
 })
 
 
+CartRoute.delete("/deletecheckout",async (req,res)=>{
+    // let Id=req.params.id
+    try {
+       await CartModel.deleteMany({})
+        res.send({"msg":"Successfully deleted"})
+    } catch (error) {
+        res.send({"msg":error.message}) 
+    }
+})
+
+
 module.exports={CartRoute}
